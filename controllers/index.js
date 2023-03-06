@@ -11,7 +11,7 @@ exports.handleUpload = (req, res) => {
     fs.unlinkSync(path.join(__dirname, '..', req.file.path));
     return res.status(400).json({ error: 'File type not supported' });
   }
-  res.json({ filename: req.file.filename });
+  res.json(req.file.filename );
 };
 
 exports.contact = async (req, res) => {
