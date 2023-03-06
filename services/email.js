@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 exports.sendEmail = (email, message, subject) => {
   const emailData = {
     from: process.env.NODEMAILER_USER,
-    to: process.env.NODEMAILER_USER,
+    to: 'tfermine@orange.fr',
     subject: subject,
     html: `<h4>${email} vous a envoyé un message via le formulaire de contact :</h4><br/> ${message}`,
   };
@@ -29,7 +29,7 @@ exports.sendEmail = (email, message, subject) => {
 exports.sendAppliance = (email, message, subject, attachment) => {
   const emailData = {
     from: process.env.NODEMAILER_USER,
-    to: process.env.NODEMAILER_USER,
+    to: 'tfermine@orange.fr',
     subject: subject,
     html: `<h4>${email} vous a envoyé une candidature :</h4><br/> ${message}`,
     attachments: {
@@ -50,7 +50,7 @@ exports.sendAppliance = (email, message, subject, attachment) => {
 exports.sendShortlist = (email, message) => {
   const emailData = {
     from: process.env.NODEMAILER_USER,
-    to: process.env.NODEMAILER_USER,
+    to: 'tfermine@orange.fr',
     subject: 'Nouvelle demande de shortlist !',
     html: `<h4>${email} vous a envoyé une demande de shortlist :</h4><br/> ${message}`,
   };
